@@ -1,0 +1,76 @@
+@bgcolor:rgba(128, 128, 128, 0.342);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: bold 20px "Courier";
+
+}
+.main{
+
+    width: 360px;
+    height: 420px;
+    background-color: @bgcolor;
+    border: 10px solid #000;
+    border-radius: 10px;
+    margin: 100px auto;
+    font: bold 20px "Courier";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .stage{
+        width: 304px;
+        height: 304px;
+        border: 2px solid;
+        position: relative;
+        .snake>div{
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border: 1px solid @bgcolor;  
+            position: absolute;
+        }
+        .food{
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            width: 10px;
+            height: 10px;
+            transform: scale(.8);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            align-content: space-between;
+            div{
+                width: 4px;
+                height: 4px;
+                background-color: #000;
+                transform: rotate(45deg);
+            }
+        }
+
+    }
+    .score-panel{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+.g{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+    background-color: aliceblue;
+}
